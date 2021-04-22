@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 
 from library.books.models import Author, Book
 
@@ -9,7 +10,7 @@ class AuthorSerializer(serializers.ModelSerializer):
         fields = ["id", "name"]
 
 
-class BookSerializer(serializers.ModelSerializer):
+class BookSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
     authors = AuthorSerializer(many=True)
 
     class Meta:

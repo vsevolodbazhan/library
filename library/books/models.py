@@ -15,7 +15,7 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(verbose_name="Title", max_length=250)
-    description = models.TextField(verbose_name="Description")
+    description = models.TextField(verbose_name="Description", blank=True)
     authors = models.ManyToManyField(Author)
 
     class Meta:
