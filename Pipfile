@@ -5,13 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
-psycopg2-binary = "*"
+djangorestframework = "*"
 
 [dev-packages]
 black = "*"
 flake8 = "*"
 isort = "*"
-mypy = "*"
 
 [requires]
 python_version = "3.9"
