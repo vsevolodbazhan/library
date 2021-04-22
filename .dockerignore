@@ -1,5 +1,5 @@
 *
 !db.sqlite3
 !requirements.txt
-!./library
+!library
 !manage.py
