@@ -220,3 +220,69 @@ Adding a new book:
 ```bash
 curl -X POST --user john_doe:john_doe_library --header "Content-Type: application/json" --data '{"title": "Catching Fire", "authors": [{"id": 1, "name": "Suzanne Collins"}]}' "http://localhost:8000/books/"
 ```
+
+```json
+{
+  "id": 6,
+  "title": "Catching Fire",
+  "description": "",
+  "authors": [
+    {
+      "id": 1,
+      "name": "Suzanne Collins"
+    }
+  ]
+}
+```
+
+Updating the existing book:
+
+```bash
+curl -X PUT --user john_doe:john_doe_library --header "Content-Type: application/json" --data '{"title": "The Hunger Games: Catching Fire", "authors": [{"id": 1, "name": "Suzanne Collins"}]}' "http://localhost:8000/books/6/"
+```
+
+```json
+{
+  "id": 6,
+  "title": "The Hunger Games: Catching Fire",
+  "description": "",
+  "authors": [
+    {
+      "id": 1,
+      "name": "Suzanne Collins"
+    }
+  ]
+}
+```
+
+Deleting the existing book:
+
+```bash
+curl -X DELETE --user john_doe:john_doe_library "http://localhost:8000/books/6/"
+```
+
+Adding a new author:
+
+```bash
+curl -X POST --user john_doe:john_doe_library --header "Content-Type: application/json" --data '{"name": "John Green"}' "http://localhost:8000/authors/"
+```
+
+```json
+{"id": 7, "name": "John Green"}
+```
+
+Updating the existing author:
+
+```bash
+curl -X PUT --user john_doe:john_doe_library --header "Content-Type: application/json" --data '{"name": "John Michael Green"}' "http://localhost:8000/authors/7/"
+```
+
+```json
+{"id": 7, "name": "John Michael Green"}
+```
+
+Deleting the existing author:
+
+```bash
+curl -X DELETE --user john_doe:john_doe_library "http://localhost:8000/authors/7/"
+```
