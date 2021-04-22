@@ -16,7 +16,7 @@ Then run it:
 docker run -p 8000:8000 mytona_library
 ```
 
-## Usage 2
+## API
 
 Seeing available endpoints:
 
@@ -139,7 +139,7 @@ curl -X GET --user john_doe:john_doe_library "http://localhost:8000/authors/"
 Listing books filtered by authors:
 
 ```bash
-curl -X GET --user john_doe:john_doe_library "http://localhost:8000/books/?books=J.K+Rowling,Harper+Lee"
+curl -X GET --user john_doe:john_doe_library "http://localhost:8000/books/?authors=J.K.+Rowling,Harper+Lee"
 ```
 
 ```json
@@ -156,28 +156,6 @@ curl -X GET --user john_doe:john_doe_library "http://localhost:8000/books/?books
       {
         "id": 6,
         "name": "Mary GrandPré"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "The Book Thief",
-    "description": "It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will be busier still.",
-    "authors": [
-      {
-        "id": 5,
-        "name": "Markus Zusak"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "title": "The Hunger Games",
-    "description": "In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of twelve and eighteen to participate in the annual Hunger Games, a fight to the death on live TV.",
-    "authors": [
-      {
-        "id": 1,
-        "name": "Suzanne Collins"
       }
     ]
   },
