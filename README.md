@@ -4,7 +4,7 @@ Python API-only web-service for managing books.
 
 ## Notes
 
-The database `db.sqlite3` is commited and ready to use so you would not have to add data data and create users manually.
+The database `db.sqlite3` is commited and ready to use so you would not have to add data and create users manually.
 
 ## Usage
 
