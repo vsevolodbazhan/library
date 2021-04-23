@@ -28,7 +28,7 @@ Seeing available endpoints:
 curl -X GET "http://localhost:8000"
 ```
 ```json
-{"authors":"http://localhost:8000/authors/","books":"http://localhost:8000/books/"}
+{"authors":"http://localhost:8000/authors/", "books":"http://localhost:8000/books/"}
 ```
 
 Listing all authors:
@@ -37,7 +37,7 @@ Listing all authors:
 curl -X GET "http://localhost:8000/authors/"
 ```
 ```json
-{"detail":"Authentication credentials were not provided."}
+{"detail": "Authentication credentials were not provided."}
 ```
 
 `author` endpoint (as well as `books` endpoint) requries an authentication. Authenticate with following credentials:
